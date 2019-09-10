@@ -1,5 +1,4 @@
-#currentdir = os.path.realpath(__file__)
-#file = currentdir
+#Create variables for all the data
 date = []
 money = []
 change = []
@@ -10,6 +9,7 @@ increase = int(0)
 increase_date = str("")
 decrease = int(0)
 decrease_date = str("")
+#Hardcode dataset (need to change to work on another device) and import the os and file data into the program, prepping for analysis
 file = 'C:/Users/sadva/SMU_Coursework/SMU_HW/Challenges_Python_HW/PyBank/budget_data.csv'
 import os
 import csv
@@ -17,8 +17,11 @@ with open (file, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
     for row in csvreader:
+        #Calculate the total months
         months += 1
+        #Calculate total earnings
         total += int(row[1])
+        #Calculate the greatest increase in profits
         date.append(row[0])
         money.append(float(row[1]))
         for i in range(1, months):
@@ -26,11 +29,13 @@ with open (file, 'r') as csvfile:
             if money[i - 1] - money[i] < increase:
                 increase = money[i - 1] - money[i]
                 increase_date = date[i]
+            #Calculate the greatest decrease in profits
             elif money[i - 1] - money[i] > decrease:
                 decrease = money[i - 1] - money[i]
                 decrease_date = date[i]
+    #Calculate average 
     average = sum(change)/months
-
+#Print data in terminal
 print("")
 print("Financial Analysis")
 print("------------------")
