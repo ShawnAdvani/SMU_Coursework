@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='eng'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Design Challenge</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color:blueviolet">
+    <nav class="navbar navbar-dark" style="background-color: #000000;padding-right: 25px;padding-left: 25px;">
+        <div class="row .col-md-1">
+            <a class="navbar-brand" href="Web-Design-Challenge.html">Weather On Point!</a>
+        </div>
+        <div class="row .col-md-3 .col-md-offset-8">
+            <a class="navbar-brand" href="comparison.html">Comparisons</a>
+            <a class="navbar-brand" href="weather_data.html">Dataset</a>
+            <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Visualisations
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="cloud.html">Cloud</a>
+                    <a class="dropdown-item" href="humidity.html">Humidity</a>
+                    <a class="dropdown-item" href="temperature.html">Temperature</a>
+                    <a class="dropdown-item" href="wind.html">Wind</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <h3 style="padding-top: 25px;text-align: center;">Cloud Distribution</h3>
+    <article style="background-color:white;padding-right: 25px;padding-left: 25px;">
+        <div class="row">
+            <p><img src="img/cloud_scatter.png" style="float: left;" height="500px" width="750px"><br><br><br>This plot
+                analyses the differences in cloud accumulation across the different latitude lines. Looking at the plot,
+                there seems to be no correlation between the different latitude lines and the cloud accumulation; cloud
+                accumulation is high (100) and low (0) in all of the latitude lines. This would suggest that the cloud coverage is
+                independent of latitude position.</p>
+        </div>
+    </article>
+    <footer style="background-color: mediumblue;justify-content: center;padding-bottom: 10px;">
+        <hr style="border-top: 5px solid black;margin-top: 0px;margin-bottom: 0px;">
+        <h6 align="center">Southern Methodist University: Data Science Bootcamp</h6>
+        <h6 align="center" style="margin-bottom: 0px;">Shawn Advani</h6>
+    </footer>
+</body>
+
+</html>

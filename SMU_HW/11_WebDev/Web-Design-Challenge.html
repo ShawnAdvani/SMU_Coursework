@@ -1,14 +1,113 @@
 <!DOCTYPE html>
 <html lang='eng'>
-    <head>
-        <meta charset="UTF-8">
-        <title>Web Design Challenge</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Web Design Challenge - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+<body style="background-color:blueviolet">
+    <nav class="navbar navbar-dark" style="background-color: #000000;padding-right: 25px;padding-left: 25px;">
+        <div class="row .col-md-1">
+            <a class="navbar-brand" href="Web-Design-Challenge.html">Weather On Point!</a>
+        </div>
+        <div class="row .col-md-3 .col-md-offset-8">
+            <a class="navbar-brand" href="comparison.html">Comparisons</a>
+            <a class="navbar-brand" href="weather_data.html">Dataset</a>
+            <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Visualisations
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="cloud.html">Cloud</a>
+                    <a class="dropdown-item" href="humidity.html">Humidity</a>
+                    <a class="dropdown-item" href="temperature.html">Temperature</a>
+                    <a class="dropdown-item" href="wind.html">Wind</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header style="padding-top: 25px;text-align: center;">
         <h1>Weather On Point!</h1>
-        <h5>The analysis of weather trends on latitude lines</h5>
-        <p>
-            Weather on planet earth is a constantly changing yet local experience across planet earth. However, trends have been observed while watching weather trends from north to south. With that in mind, I have analysed regular trends in weather on the different latitude lines. Weather in this case will be analysed based on 4 aspects; cloud cover, humidity, wind, and temperature. These four aspects were analysed based on latitude lines, checked for significance and graphed out. I led this research on this questions: to what extent does weather differ accross different latitude lines?; To what degree does weather trends relate to distance to the equator?; Which aspects of weather seem to support trends the most?
-        </p>
-    </body>
+        <h4>The analysis of weather trends and latitude lines</h4>
+    </header>
+    <article style="background-color:white;padding-right: 25px;padding-left: 25px;">
+        <div class="row">
+            <p><img src="img/temp_scatter.png" style="float: left;" height="500px" width="750px"><br><br><br>Weather on planet earth
+                is a constantly changing yet local experience across planet earth. However,
+                trends have been observed while watching weather trends from north to south. With that in mind, I
+                have analyzed regular trends in weather on the different latitude lines. Weather in this case will
+                be analyzed based on 4 aspects; cloud cover, humidity, wind, and temperature. These four aspects
+                were analyzed based on latitude lines, checked for significance and graphed out. I led this research
+                on this questions: to what extent does weather differ across different latitude lines?; To what
+                degree does weather trends relate to distance to the equator?; Which aspects of weather seem to
+                support trends the most?<br><br>To answer these questions, I collected data from the OpenWeatherMap api.
+                As I already had a list of
+                cities across the world, it was as simple as looping through the list and calling all the data,
+                converting the json objects into a series of lists. With that, I was able to create a Pandas table
+                and analyze the results into matplotlib visualizations, viewable in the navigation bar above or the cards
+                below.</p>
+        </div>
+    </article>
+    <section style="background-color:mediumblue;padding-right: 50px;padding-left: 50px;padding-bottom: 10px;padding-top: 10px;">
+        <h3>Visualisations</h3>
+        <div class=row style="justify-content: space-between;">
+            <div class="row .col-md-3" style="padding-right: 10px;padding-left:10px;padding-bottom: 10px;padding-top: 10px;">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/cloud_scatter.png" class="card-img-top" alt="Cloud Scatter">
+                    <div class="card-body">
+                        <h5 class="card-title">Cloud Scatter</h5>
+                        <p class="card-text">Cloud dispertion across different latitude lines.</p>
+                        <a href="cloud.html" class="btn btn-primary">View Description</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row .col-md-3" style="padding-right: 10px;padding-left:10px;padding-bottom: 10px;padding-top: 10px;">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/humidity_scatter.png" class="card-img-top" alt="Humidity Scatter">
+                    <div class="card-body">
+                        <h5 class="card-title">Humidity Scatter</h5>
+                        <p class="card-text">Humidity levels across different latitude lines.</p>
+                        <a href="humidity.html" class="btn btn-primary">View Description</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row .col-md-3" style="padding-right: 10px;padding-left:10px;padding-bottom: 10px;padding-top: 10px;">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/temp_scatter.png" class="card-img-top" alt="Cloud Scatter">
+                    <div class="card-body">
+                        <h5 class="card-title">Temperature Scatter</h5>
+                        <p class="card-text">Temperature levels across different latitude lines.</p>
+                        <a href="temperature.html" class="btn btn-primary">View Description</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row .col-md-3" style="padding-right: 10px;padding-left:10px;padding-bottom: 10px;padding-top: 10px;">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/wind_scatter.png" class="card-img-top" alt="Cloud Scatter">
+                    <div class="card-body">
+                        <h5 class="card-title">Wind Scatter</h5>
+                        <p class="card-text">Wind speeds across different latitude lines.</p>
+                        <a href="wind.html" class="btn btn-primary">View Description</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer style="background-color: mediumblue;justify-content: center;padding-bottom: 10px;">
+        <hr style="border-top: 5px solid black;margin-top: 0px;margin-bottom: 0px;">
+        <h6 align="center">Southern Methodist University: Data Science Bootcamp</h6>
+        <h6 align="center" style="margin-bottom: 0px;">Shawn Advani</h6>
+    </footer>
+</body>
 </html>
