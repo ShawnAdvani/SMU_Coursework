@@ -1,5 +1,5 @@
 var url1 = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
-var url2 = "https://raw.githubusercontent.com/fraxen/faults/master/GeoJSON/PB2002_boundaries.json";
+var url2 = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json";
 d3.json(url1, function (data) {
   createFeatures(data.features);
 });
